@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f7f7f2;
+    color: #1e1e24;
+    line-height: 1.6;
+}
+
+
+/* Header */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #f7f7f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    z-index: 1000;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e1e24;
+}
+
+.navmenu {
+    display: flex;
+    gap: 2rem;
+}
+
+.navmenu a {
+    color: #1e1e24;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navmenu a:hover {
+    color: #555;
+}
+
+
+/* Animasi klik */
+
+.nav-link {
+    position: relative;
+    color: #1e1e24;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:focus {
+    outline: none;
+    /* Hilangkan garis fokus default */
+}
+
+.nav-link.clicked {
+    animation: clickEffect 0.3s ease;
+}
+
+@keyframes clickEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* home */
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100vh;
+    padding: 4rem;
+    gap: 2rem;
+}
+
+.home-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.home-text p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.home-btn .btn {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    background: #1e1e24;
+    color: #f7f7f2;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.home-btn .btn:hover {
+    background: #f7f7f2;
+    color: #1e1e24;
+    border: 1px solid #1e1e24;
+}
+
+.name-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* sosmed*/
+
+.social-icon {
+    position: fixed;
+    top: 40%;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.social-icon a {
+    font-size: 1.8rem;
+    color: #1e1e24;
+    transition: transform 0.3s;
+}
+
+.social-icon a:hover {
+    transform: scale(1.2);
+}
+
+#skills {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.skill h3 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+
+/* scrol */
+
+.scroll-btn {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #1e1e24;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.scroll-btn:hover {
+    transform: translateX(-50%) translateY(-5px);
+}
+
+
+/* Section Projects */
+
+.projects {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+
+/* Container untuk Grid 3 Kolom */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 kolom dalam 1 baris */
+    gap: 2rem;
+    /* Jarak antar kolom */
+}
+
+
+/* Setiap Project */
+
+.project {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.project .btn {
+    display: inline-block;
+    background-color: #1e1e24;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.project .btn:hover {
+    background-color: #d4af37;
+}
+
+
+/* Responsiveness untuk tampilan mobile */
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolom pada layar lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        /* 1 kolom pada layar ponsel */
+    }
+}
+
+.footer {
+    background-color: #1e1e24;
+    color: #f7f7f2;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #f7f7f2;
+}
+
+.footer a {
+    color: #f7f7f2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #d4af37;
+    /* Warna hover emas */
+}
+
+.footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer .d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.footer .gap-3>li {
+    margin-right: 1rem;
+}
+
+.footer img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer img:hover {
+    transform: scale(1.2);
+}
+
+.footer .text-center {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #bbb;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Narendra Satya Adikurniawan</title>
+    <script src="https://unpkg-com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<!-- <section id="about"></section> -->
+<!-- <a href="index.html#about">About</a> -->
+
+<body>
+    <header>
+        <ul class="navmenu">
+            <li><a href="index.html#home">Home</a> </li>
+            <li><a href="index.html#about">About</a> </li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li> <a href="index.html#project">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                // Tambahkan animasi klik
+                link.classList.add('clicked');
+
+                // Hapus animasi setelah selesai (300ms sesuai durasi animasi CSS)
+                setTimeout(() => {
+                    link.classList.remove('clicked');
+                }, 300);
+            });
+        });
+    </script>
+
+    <section class="home">
+        <div class="home-text">
+            <h2>Hello, I'm Narendra <i class="ph-bold ph-hand-waving"></i></h2>
+            <h3>Frontend Developer</h3>
+            <section id="about">
+                <p>As a beginner programmer. I was born in Kudus city in May 2005. I am currently studying for a bachelor's degree in the Bachelor of Informatics Engineering Program at Muhammadiyah University of Surakarta.<br> I am disciplined, honest, confident,
+                    persistent, goal-oriented, and have good public speaking skills.</p>
+            </section>
+            <div class="home-btn">
+                <a href="#" class="btn">Contact Info</a>
+                <a href="https://drive.google.com/file/d/1Z39f4Dg8dP3zRx0ic2eaX9bAl7Po6dhl/view?usp=sharing" class="btn">Download CV</a>
+            </div>
+        </div>
+        <div class="name-img">
+            <img src="./asset/fotonaren.jpg" />
+        </div>
+    </section>
+    <div class="social-icon">
+        <a href="#"><i class="ph-bold ph-instagram-logo"></i></a>
+        <a href="#"><i class="ph-bold ph-linkedin-logo"></i></a>
+        <a href="#"><i class="ph-bold ph-github-logo"></i></a>
+    </div>
+    <!-- <a href="#" class="scroll-btn">Scroll Down <i class="ph-bold ph-arrow-bend-right-down"></i></a> -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Icon">
+                <h3>HTML</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python Icon">
+                <h3>Python</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png" alt="SQL Icon">
+                <h3>SQL</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="Java Icon">
+                <h3>Java</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma Icon">
+                <h3>Figma</h3>
+            </div>
+        </div>
+    </section>
+    <section id="project" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="./asset/projek_1,1.png" alt="Project 1">
+                <h3>Project Website Ormawa</h3>
+                <p>In this project, I was assigned to create a profile page for the needs of the Informatics Engineering Student Association work program. In my assignment I worked on the Front End. In this project I used a little animation with the Java
+                    Script programming language. The use of Java Script in this project is used to make the profile page photo display run automatically.</p>
+                <a href="https://himatifums.org/" class="btn">View Project</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                <h3>Redesigning the user interface of the MyPresensi UMS application</h3>
+                <p>The UMS MyPresence app is a mobile platform for students and lecturers at Muhammadiyah University of Surakarta (UMS) to manage attendance, track presence, and organize lecture schedules. The app requires a redesign to improve usability.
+                    This project focuses on revamping the user interface (UI) to be more intuitive, responsive, and efficient, ensuring easy access to all features for both students and lecturers.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                <h3>Project Three</h3>
+                <p>Short description of the project goes here. It's a creative project that pushes boundaries.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer bg-dark text-white mt-5 p-4">
+        <div class="container">
+            <div class="row">
+                <!-- About Me Section -->
+                <div class="col-md-4 mb-3">
+                    <h5>About Me</h5>
+                    <p>
+                        I am Narendra Satya Adikurniawan, an Informatics Engineering student with a passion for technology, research, and development. Stay connected to learn more about my journey and projects.
+                    </p>
+                </div>
+
+                <!-- Contact Info Section -->
+                <div class="col-md-4 mb-3">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li>Email:
+                            <a href="mailto:narendra.adikurniawan@gmail.com" class="text-white">narendra.adikurniawan@gmail.com</a>
+                        </li>
+                        <li>Phone:
+                            <a href="tel:+6285890022967" class="text-white">+62 858 9002 2967</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Follow Me Section -->
+                <div class="col-md-4 mb-3">
+                    <h5>Follow Me</h5>
+                    <ul class="list-unstyled d-flex gap-3">
+                        <li>
+                            <a href="https://instagram.com/narenvisuals_" target="_blank" class="text-white">
+                                <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/narendra-satya-adikurniawan" target="_blank" class="text-white">
+                                <img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:narendra.adikurniawan@gmail.com" target="_blank" class="text-white">
+                                <img src="https://img.icons8.com/ios-filled/24/ffffff/gmail.png" alt="Gmail">
+                            </a>
+                        </li>
+                        <li>
+                            <!-- <a href="https://twitter.com/narenvisuals_" target="_blank" class="text-white">
+                              <img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter">
+                          </a> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <p class="m-0">&copy; 2024 Narendra Satya Adikurniawan. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
