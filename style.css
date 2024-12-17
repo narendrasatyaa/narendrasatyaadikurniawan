@@ -118,6 +118,7 @@ header {
 .home-btn .btn {
     display: inline-block;
     margin-right: 1rem;
+    /* margin-bottom: 5rem; */
     padding: 0.8rem 1.5rem;
     border-radius: 0.5rem;
     background: #1e1e24;
@@ -126,6 +127,14 @@ header {
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s;
+}
+
+.home-btn {
+    display: flex;
+    gap: 1rem;
+    /* Jarak antar tombol */
+    flex-wrap: wrap;
+    /* Agar responsif jika terlalu sempit */
 }
 
 .home-btn .btn:hover {
@@ -139,6 +148,7 @@ header {
     max-width: 300px;
     border-radius: 50%;
     object-fit: cover;
+    align-items: baseline;
 }
 
 
@@ -165,6 +175,8 @@ header {
 
 #skills {
     padding: 4rem 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     text-align: center;
     background-color: #f9f9f9;
 }
@@ -259,6 +271,34 @@ header {
 
 /* Setiap Project */
 
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 kolom */
+    gap: 2rem;
+    /* Jarak antar kolom */
+}
+
+
+/* Tampilan Tablet */
+
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolom di layar sedang */
+    }
+}
+
+
+/* Tampilan Mobile */
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        /* 1 kolom di layar kecil */
+    }
+}
+
 .project {
     background: #fff;
     border-radius: 8px;
@@ -268,14 +308,10 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-
 .project img {
     width: 100%;
     height: auto;
+    /* Biarkan tinggi menyesuaikan */
     border-radius: 8px;
     margin-bottom: 1rem;
 }
@@ -312,16 +348,40 @@ header {
 /* Responsiveness untuk tampilan mobile */
 
 @media (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 kolom pada layar lebih kecil */
+    .navmenu {
+        display: none;
+        flex-direction: column;
+        background-color: #f7f7f2;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .navmenu.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        /* Tombol muncul di mobile */
+    }
+    .navmenu li {
+        text-align: center;
+        padding: 1rem 0;
     }
 }
 
-@media (max-width: 480px) {
-    .projects-container {
-        grid-template-columns: 1fr;
-        /* 1 kolom pada layar ponsel */
+
+/* Skills Layout Responsif */
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .skill {
+        width: 100%;
     }
 }
 
