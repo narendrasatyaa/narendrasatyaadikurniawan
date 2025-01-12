@@ -1,35 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
-/* Global Styles */
-
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
 body {
-    background-color: #f7f7f2;
+    background-color: #ffffff;
     color: #1e1e24;
     line-height: 1.6;
+    font-size: 16px;
 }
 
-
-/* Header */
+.container {
+    display: flexbox;
+    flex-direction: column;
+    gap: 0;
+    /* untuk flexbox */
+}
 
 header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background: #f7f7f2;
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 4rem;
+    padding: 1rem 4rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    border-bottom: 1px solid #eaeaea;
 }
 
 .logo {
@@ -38,9 +40,20 @@ header {
     color: #1e1e24;
 }
 
-.navmenu {
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1e1e24;
+}
+
+.navmenu ul {
     display: flex;
     gap: 2rem;
+    list-style: none;
+    align-items: center;
 }
 
 .navmenu a {
@@ -48,77 +61,15 @@ header {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    font-size: 1rem;
 }
 
 .navmenu a:hover {
     color: #555;
 }
 
-
-/* Animasi klik */
-
-.nav-link {
-    position: relative;
-    color: #1e1e24;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-link:focus {
-    outline: none;
-    /* Hilangkan garis fokus default */
-}
-
-.nav-link.clicked {
-    animation: clickEffect 0.3s ease;
-}
-
-@keyframes clickEffect {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.9);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-/* home */
-
-.home {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    height: 100vh;
-    padding: 4rem;
-    gap: 2rem;
-}
-
-.home-text h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.home-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #555;
-}
-
-.home-text p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.home-btn .btn {
+.btn {
     display: inline-block;
-    margin-right: 1rem;
-    /* margin-bottom: 5rem; */
     padding: 0.8rem 1.5rem;
     border-radius: 0.5rem;
     background: #1e1e24;
@@ -129,78 +80,87 @@ header {
     transition: all 0.3s;
 }
 
-.home-btn {
-    display: flex;
-    gap: 1rem;
-    /* Jarak antar tombol */
-    flex-wrap: wrap;
-    /* Agar responsif jika terlalu sempit */
-}
-
-.home-btn .btn:hover {
+.btn:hover {
     background: #f7f7f2;
     color: #1e1e24;
     border: 1px solid #1e1e24;
 }
 
-.name-img img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    align-items: baseline;
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100vh;
+    padding: 4rem;
+    padding-bottom: 0px;
+    /* gap: 2rem; */
 }
 
-
-/* sosmed*/
-
-.social-icon {
-    position: fixed;
-    top: 40%;
-    left: 2%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.home-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.social-icon a {
-    font-size: 1.8rem;
-    color: #1e1e24;
-    transition: transform 0.3s;
-}
-
-.social-icon a:hover {
-    transform: scale(1.2);
-}
-
-#skills {
-    padding: 4rem 2rem;
-    margin-top: 2rem;
+.home-text p {
+    font-size: 1rem;
     margin-bottom: 2rem;
-    text-align: center;
-    background-color: #f9f9f9;
+    color: #333;
 }
 
-#skills h2 {
-    font-size: 2.5rem;
+.about {
+    display: flexbox;
+    /* grid-template-columns: 1fr ; */
+    align-items: center;
+    height: 100vh;
+    padding: 4rem;
+    /* gap: 2rem; */
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1rem;
     margin-bottom: 2rem;
     color: #333;
 }
 
 .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
 }
 
-.skill {
+.skills,
+.experiences {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skills .skill,
+.experiences .experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.skills .skill {
     background: #fff;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 150px;
+    width: 100%;
+    /* Make skill boxes full width */
     transition: transform 0.3s ease;
 }
 
@@ -209,46 +169,90 @@ header {
 }
 
 .skill img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 1rem;
+    object-fit: contain;
 }
 
 .skill h3 {
     font-size: 1.2rem;
-    color: #555;
+    margin: 0;
+    color: #333;
+}
+
+.skills-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
 }
 
 
-/* scrol */
+/* Experience Section Styles */
 
-.scroll-btn {
-    position: fixed;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #1e1e24;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
+.experiences .experience {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    transition: transform 0.3s;
+    gap: 1.5rem;
+    margin-bottom: 15px;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.scroll-btn:hover {
-    transform: translateX(-50%) translateY(-5px);
+.experience img {
+    width: 50px;
+    /* Adjust size of logo */
+    height: 50px;
+    object-fit: contain;
 }
 
+.experience .details {
+    flex-grow: 1;
+}
 
-/* Section Projects */
+.experience .date {
+    font-size: 14px;
+    color: #666;
+}
+
+.experience .role {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.experience .organization {
+    font-size: 14px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    .skills .skill,
+    .experiences .experience {
+        width: 100%;
+        /* Stack skills and experiences in a single column */
+    }
+    .experiences .experience {
+        flex-direction: column;
+        align-items: center;
+    }
+    .experience .details {
+        margin-left: 0;
+        text-align: center;
+    }
+}
 
 .projects {
     padding: 4rem 2rem;
     text-align: center;
     background-color: #f9f9f9;
+    padding: 4rem;
+    gap: 2rem;
 }
 
 .projects h2 {
@@ -257,35 +261,22 @@ header {
     color: #333;
 }
 
-
-/* Container untuk Grid 3 Kolom */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*atur 3 kolom dalam 1 baris */
+    gap: 2rem;
+}
 
 .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 kolom dalam 1 baris */
     gap: 2rem;
-    /* Jarak antar kolom */
 }
-
-
-/* Setiap Project */
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 kolom */
-    gap: 2rem;
-    /* Jarak antar kolom */
-}
-
-
-/* Tampilan Tablet */
 
 @media (max-width: 1024px) {
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 kolom di layar sedang */
     }
 }
 
@@ -344,98 +335,60 @@ header {
     background-color: #d4af37;
 }
 
+.name-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+}
 
-/* Responsiveness untuk tampilan mobile */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
 
-@media (max-width: 768px) {
-    .navmenu {
-        display: none;
-        flex-direction: column;
-        background-color: #f7f7f2;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .navmenu.active {
-        display: flex;
-    }
+.social-icon a {
+    color: #1e1e24;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icon a:hover {
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
-        /* Tombol muncul di mobile */
     }
-    .navmenu li {
+    .navmenu {
+        display: none;
+    }
+    header {
+        justify-content: space-between;
+    }
+    .home {
+        flex-direction: column;
         text-align: center;
-        padding: 1rem 0;
+        padding: 2rem;
+    }
+    .name-img img {
+        max-width: 200px;
     }
 }
-
-
-/* Skills Layout Responsif */
 
 @media (max-width: 768px) {
-    .skills-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-    .skill {
-        width: 100%;
+    .skills .skill {
+        flex: 0 1 calc(50% - 20px);
+        /* 2 columns layout for smaller screens */
     }
 }
 
-.footer {
-    background-color: #1e1e24;
-    color: #f7f7f2;
-    padding: 2rem 1rem;
-    font-size: 0.9rem;
-}
-
-.footer h5 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #f7f7f2;
-}
-
-.footer a {
-    color: #f7f7f2;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: #d4af37;
-    /* Warna hover emas */
-}
-
-.footer ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.footer .d-flex {
-    display: flex;
-    align-items: center;
-}
-
-.footer .gap-3>li {
-    margin-right: 1rem;
-}
-
-.footer img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-}
-
-.footer img:hover {
-    transform: scale(1.2);
-}
-
-.footer .text-center {
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    color: #bbb;
+@media (max-width: 480px) {
+    .skills .skill {
+        flex: 0 1 100%;
+        /* 1 column layout for smallest screens */
+    }
 }
