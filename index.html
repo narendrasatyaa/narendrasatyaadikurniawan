@@ -4,66 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portofolio | Narendra Satya Adikurniawan</title>
-    <script src="https://unpkg-com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="style.css" />
-
+    <link rel="icon" type="png" href="./asset/logonaren.png">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="tes.css">
+    <title>Profile | Narendra</title>
 </head>
 
 <body>
     <header>
-        <button class="menu-toggle" id="menu-toggle">
-            <i class="ph-bold ph-list"></i>
+
+        <a href="https://www.linkedin.com/in/narendra-satya-adikurniawan" class="logo">Narendra</a>
+        <button class="menu-toggle">
+            <i class="ph ph-list"></i>
         </button>
-        <ul class="navmenu">
-            <li><a href="index.html#home">Home</a> </li>
-            <li><a href="index.html#about">About</a> </li>
-            <li><a href="index.html#skills">Skills</a></li>
-            <li> <a href="index.html#project">Projects</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
+        <nav class="navmenu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#creations">Creations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="https://drive.google.com/file/d/1Z39f4Dg8dP3zRx0ic2eaX9bAl7Po6dhl/view?usp=sharing" class="btn">Download CV</a>
     </header>
-    <script>
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                // Tambahkan animasi klik
-                link.classList.add('clicked');
 
-                // Hapus animasi setelah selesai (300ms sesuai durasi animasi CSS)
-                setTimeout(() => {
-                    link.classList.remove('clicked');
-                }, 300);
-            });
-        });
-    </script>
-
-    <section class="home">
+    <section id="home" class="home">
         <div class="home-text">
             <h2>Hello, I'm Narendra <i class="ph-bold ph-hand-waving"></i></h2>
-            <h3>Frontend Developer</h3>
-            <section id="about">
-                <p>As a beginner programmer. I was born in Kudus city in May 2005. I am currently studying for a bachelor's degree in the Bachelor of Informatics Engineering Program at Muhammadiyah University of Surakarta. I am disciplined, honest, confident,
-                    persistent, goal-oriented, and have good public speaking skills.</p>
-            </section>
+            <p>I am a beginner programmer born in Kudus city in May 2005. Currently pursuing a bachelor's degree in Informatics Engineering at Muhammadiyah University of Surakarta. I am disciplined, honest, confident, persistent, goal-oriented, and have
+                good public speaking skills.</p>
             <div class="home-btn">
-                <a href="index.html#contact" class="btn">Contact Info</a>
-                <a href="https://drive.google.com/file/d/1NqnOpC3gtgVoQyRGeyyskFESjsNTQlZJ/view?usp=sharing" class="btn">Download CV</a>
+                <a href="#contact" class="btn">Contact Info</a>
             </div>
         </div>
         <div class="name-img">
-            <img src="./asset/fotofix1.jpg" />
+            <img src="./asset/fotobaru3d.png" alt="Profile Picture">
         </div>
     </section>
-    <div class="social-icon">
-        <a href="#"><i class="ph-bold ph-instagram-logo"></i></a>
-        <a href="#"><i class="ph-bold ph-linkedin-logo"></i></a>
-        <a href="#"><i class="ph-bold ph-github-logo"></i></a>
-    </div>
-    <br>
-    <!-- <a href="#" class="scroll-btn">Scroll Down <i class="ph-bold ph-arrow-bend-right-down"></i></a> -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
+    <section id="about" class="about">
+        <h2 class="about-text">About Me <i class="ph-bold ph-hand-waving"></i></h2>
+        <h3 class="about-passion">A specialist in web development.</h3>
+        <!-- <p>A novice male programmer interested in website development.</p> -->
+        <p>As a beginner programmer who is interested in website development. I was born in the city of Kudus in May 2005. <br> I am currently studying for a bachelor's degree in the Informatics Engineering Bachelor Program at the Muhammadiyah University
+            of Surakarta. <br> I am disciplined, honest, confident, persistent, goal-oriented, and have good public speaking skills.</p>
+        <!-- Additional content about the user can go here -->
+    </section>
+    <section id="about" class="skills-container">
+        <div class="skills">
+            <h2>Skills</h2>
             <div class="skill">
                 <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Icon">
                 <h3>HTML</h3>
@@ -84,14 +72,71 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma Icon">
                 <h3>Figma</h3>
             </div>
+        </div>
+
+        <div class="experiences">
+            <h2>Experience</h2>
+            <div class="experience">
+                <div class="skills">
+                    <img src="./asset/logohima.png" alt="HTML Icon">
+                    <div class="date">Jan 2025 - Now</div>
+                    <div class="role">Kepala Bidang Keilmuan dan Penelitian</div>
+                    <div class="organization">Himpunan Mahasiswa Teknik Informatika</div>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="skills">
+                    <img src="./asset/logoums.png" alt="HTML Icon">
+                    <div class="date">Sep 2024 - Present</div>
+                    <div class="role">Programming Algorithm Laboratory Assistant</div>
+                    <div class="organization">University of Muhammadiyah Surakarta</div>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="skills">
+                    <img src="./asset/logohima.png" alt="HTML Icon">
+                    <div class="date">Jan 2024 - Jan 2025</div>
+                    <div class="role">Anggota Bidang Keilmuan dan Penelitian</div>
+                    <div class="organization">Himpunan Mahasiswa Teknik Informatika</div>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="skills">
+                    <img src="./asset/logofosti.png" alt="HTML Icon">
+                    <!-- <h3>HTML</h3> -->
+                    <div class="date">Jan 2024 - Now</div>
+                    <div class="role">Anggota Divisi Keilmuan dan Riset Teknologi</div>
+                    <div class="organization">Forum Open Source Teknik Informatika</div>
+                </div>
+            </div>
             <!-- <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Icon">
+
+                <h3>Programming Algorithm Laboratory Assistant</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python Icon">
+                <h3>Python</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png" alt="SQL Icon">
+                <h3>SQL</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="Java Icon">
+                <h3>Java</h3>
+            </div>
+            <div class="skill">
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma Icon">
                 <h3>Figma</h3>
             </div> -->
         </div>
     </section>
-    <section id="project" class="projects">
-        <h2>My Projects</h2>
+
+    <div id="creations" class="project">
+        <!-- Showcase of creations/projects can go here -->
+        <h2>My Creations</h2>
+        <p>See wonderful development stuff below</p>
         <div class="projects-container">
             <!-- Project 1 -->
             <div class="project">
@@ -120,76 +165,22 @@
                 <a href="https://www.figma.com/design/I4Xo7v4uJHqMmbT43tXSSy/Untitled?node-id=6-1238&t=aUETRdo7R6QGCoSI-1" class="btn">View Project</a>
             </div>
         </div>
+    </div>
+
+    <section id="contact" class="contact">
+        <div class="row">
+            <div class="col-12 text-center mt-4">
+                <p class="m-0">&copy; 2024 Narendra Satya Adikurniawan. All Rights Reserved.</p>
+            </div>
+            <div class="social-icon">
+                <a href="#"><i class="ph-bold ph-instagram-logo"></i></a>
+                <a href="#"><i class="ph-bold ph-linkedin-logo"></i></a>
+                <a href="#"><i class="ph-bold ph-github-logo"></i></a>
+                <a href="#"><i class="ph-bold ph-gmail-logo"></i></a>
+            </div>
+        </div>
+        <!-- Contact information or form can go here -->
     </section>
-
-    <section id="contact">
-        <footer class="footer bg-dark text-white mt-5 p-4">
-            <div class="container">
-                <div class="row">
-                    <!-- About Me Section -->
-                    <div class="col-md-4 mb-3">
-                        <!-- <h5>About Me</h5>
-                        <p>
-                            I am Narendra Satya Adikurniawan, an Informatics Engineering student with a passion for technology, research, and development. Stay connected to learn more about my journey and projects.
-                        </p>
-                    </div> -->
-
-                        <!-- Contact Info Section -->
-                        <div class="col-md-4 mb-3">
-                            <h5>Contact Info</h5>
-                            <ul class="list-unstyled">
-                                <li>Email:
-                                    <a href="mailto:narendra.adikurniawan@gmail.com" class="text-white">narendra.adikurniawan@gmail.com</a>
-                                </li>
-                                <li>Phone:
-                                    <a href="tel:+62 878 7575 1505" class="text-white">+62 878 7575 1505</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Follow Me Section -->
-                        <div class="col-md-4 mb-3">
-                            <h5>Follow Me</h5>
-                            <ul class="list-unstyled d-flex gap-3">
-                                <li>
-                                    <a href="https://instagram.com/narenvisuals_" target="_blank" class="text-white">
-                                        <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/narendra-satya-adikurniawan" target="_blank" class="text-white">
-                                        <img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="mailto:narendra.adikurniawan@gmail.com" target="_blank" class="text-white">
-                                        <img src="https://img.icons8.com/ios-filled/24/ffffff/gmail.png" alt="Gmail">
-                                    </a>
-                                </li>
-                                <li>
-                                    <!-- <a href="https://twitter.com/narenvisuals_" target="_blank" class="text-white">
-                                <img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter">
-                            </a> -->
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Copyright Section -->
-                    <div class="row">
-                        <div class="col-12 text-center mt-4">
-                            <p class="m-0">&copy; 2024 Narendra Satya Adikurniawan. All Rights Reserved.</p>
-                        </div>
-                    </div>
-                </div>
-        </footer>
-    </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 
 </body>
 
